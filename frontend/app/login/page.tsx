@@ -1,19 +1,19 @@
 'use client'
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function Login() {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setMessage('');
 
     try {
-      const res = await fetch('/api/auth/login', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -22,8 +22,9 @@ export default function Login() {
       const data = await res.json();
 
       if (res.ok) {
-        setMessage('Login successful! Token: ' + data.token);
+        setMessage('Login successful!');
         localStorage.setItem('token', data.token);
+        // Consider using router.push('/dashboard') here
       } else {
         setMessage(data.message || 'Error');
       }
@@ -83,4 +84,3 @@ export default function Login() {
     </div>
   );
 }
-
