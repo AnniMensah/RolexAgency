@@ -66,11 +66,34 @@ The project is measured against two primary goals:
 
 ---
 
+## 🏃‍♀️ Quick Start
+
+1. **MongoDB**: Local (`mongod`) or Atlas URI in `backend/.env`
+2. **Backend**: `cd backend && npm run dev` → http://localhost:5000
+3. **Frontend**: `cd frontend && npm run dev` → http://localhost:3000
+
+## API Docs
+| Endpoint | Desc |
+|----------|------|
+| POST /api/auth/register | Create user |
+| POST /api/auth/login | JWT login |
+| POST /api/applications | Submit app + JPEG/PNG images |
+| GET/PATCH /api/applications | List/update status (RBAC) |
+| POST/GET /api/comments/:id | Admin comments
+
+## Git Clean (for push)
+```
+git rm -r --cached frontend/node_modules backend/node_modules
+git add .gitignore
+git commit -m "Remove node_modules"
+git push
+```
+
+**MVP Live!** Test register → login → submit portfolio.
+
 ### 📝 License
 
-This project is proprietary and intended for the use of Rollex Multimedia Agency.
-
-Here is a comprehensive README file designed for your GitHub repository, incorporating the project details for the  **Rollex Multimedia Agency (The Fashion Gateway)** .
+MIT License (c) 2026 AnniMensah
 
 ---
 

@@ -1,11 +1,12 @@
 # Dependencies
-node_modules/
+**/node_modules
+**/bower_components
 
-# Next.js build output
-.next/
-out/
+# Production builds
+**/dist
+**/build
 
-# Environments
+# Environment variables
 .env
 .env.local
 .env.development.local
@@ -13,6 +14,42 @@ out/
 .env.production.local
 
 # Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea
+*.swp
+*.swo
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+**/coverage
+
+# Next.js
+.next
+out
+
+# Uploads dir
+backend/uploads/
+
+# Temp files
+*.tmp
