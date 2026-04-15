@@ -16,10 +16,14 @@ app.use(express.urlencoded({ extended: true }));
 
 // Basic route
 app.get('/', (req, res) => {
-  res.json({ message: 'Rollex Backend API - Ready for development' });
+  res.json({ message: 'Rollex Backend API v1.0 - All routes ready' });
 });
 
-// TODO: Add routes after setup
+// Routes
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/applications', require('./routes/applications'));
+app.use('/api/comments', require('./routes/comments'));
+
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

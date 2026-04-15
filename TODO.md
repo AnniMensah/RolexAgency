@@ -14,11 +14,13 @@ Current Progress: **Phase 0 - Setup Project Structure** (Deps installed)
 - **Current** Test: Ensure both servers start without errors
 
 ## Phase 1: Week 1 - Backend Foundation
-- [ ] Implement DB connection and models (User, Application, Comment)
-- [ ] Setup auth routes (/register, /login) with JWT and RBAC
-- [ ] Create applications basic routes (list/submit)
-- [ ] Add middleware (auth, upload)
-- [ ] Test: Manual DB insert/query, auth tokens
+- [x] Implement DB connection and models (User, Application, Comment)
+- [x] Setup auth routes (/register, /login) with JWT and RBAC
+- [x] Create applications basic routes (list/submit)
+- [x] Add middleware (auth, upload)
+- **Current** Test: Manual DB insert/query, auth tokens
+
+Current Progress: **Phase 1 complete (test DB connection)**
 
 ## Phase 2: Week 2 - Core Backend + Basic Frontend
 - [ ] Backend: Full applications routes (status update, comments, notifications mock)
